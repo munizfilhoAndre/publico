@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body background="https://img.genial.ly/5e8366de7c25f50f88095993/a4f67376-404f-46fc-990e-db073f36fbca.gif?genial">
+    <label style="color: aqua;">Sua idade</label>
+    <input type="number" name="idade" id="idade" maxlength="8" />
+    <button onclick="mostrarValor()">Confirmar</button>
+
+    <!-- Adiciona um parágrafo para exibir a mensagem -->
+    <p style="color: aqua;"id ="mensagem"></p>
+    
+    <script>
+      function mostrarValor() {
+        var inputIdade = document.getElementById('idade').value;
+        var mensagemElement = document.getElementById('mensagem');
+
+        if (inputIdade > 13 && inputIdade < 18) {
+          mensagemElement.textContent = "Você é de menor, mas posso namorar com você por lei";
+        } else if (inputIdade >= 18) {
+          mensagemElement.textContent = "Você é de maior, logo posso namorar";
+        } else {
+          mensagemElement.textContent = "Por lei é crime namorar uma pessoa dessa idade, por isso eu não posso";
+        }
+      }
+    </script>
+</body>
+</html>
